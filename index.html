@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050d19">
+<title>TECHNO RC | Smart Robot Control</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#050d19;color:#eafaff;line-height:1.7}
+:root{--cyan:#39eaff;--blue:#398cff;--panel:#0c1d30}
+.wrap{width:90%;max-width:1150px;margin:auto}
+header{position:sticky;top:0;background:#050d19ed;border-bottom:1px solid #39eaff33;z-index:10}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:900;letter-spacing:3px;color:var(--cyan)}
+nav a{color:#b6d5e5;text-decoration:none;margin-left:20px}
+nav a:hover{color:var(--cyan)}
+.hero{min-height:610px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.hero-text{max-width:650px}
+.tag{color:var(--cyan);letter-spacing:4px;font-size:13px;font-weight:bold}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.08;margin:20px 0}
+h1 span{color:var(--cyan);text-shadow:0 0 25px #39eaff66}
+p{color:#a9c1d3}
+.btn{display:inline-block;margin-top:25px;padding:13px 23px;border:1px solid var(--cyan);border-radius:7px;text-decoration:none;color:#03101b;background:var(--cyan);font-weight:bold}
+.btn:hover{box-shadow:0 0 25px #39eaff66}
+.reactor{width:280px;height:280px;min-width:280px;border-radius:50%;border:3px solid var(--cyan);display:grid;place-items:center;position:relative;box-shadow:0 0 40px #39eaff44,inset 0 0 35px #39eaff33}
+.reactor:before,.reactor:after{content:"";position:absolute;border:2px dashed var(--cyan);border-radius:50%;inset:18px;animation:spin 15s linear infinite}
+.reactor:after{inset:48px;border-style:solid;border-color:var(--blue);animation-direction:reverse}
+.core{width:75px;height:75px;border-radius:50%;background:var(--cyan);box-shadow:0 0 35px 15px #39eaff88}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:75px 0}
+.heading{text-align:center;font-size:34px;margin-bottom:12px}
+.sub{text-align:center;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:linear-gradient(145deg,#102942,#091726);border:1px solid #39eaff30;border-radius:12px;padding:25px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 8px 30px #39eaff16}
+.card h3{margin:12px 0;color:var(--cyan)}
+.icon{font-size:30px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+ul{padding-left:22px;color:#a9c1d3}
+li{margin:8px 0}
+.steps{counter-reset:num}
+.step{padding:12px 15px;margin:12px 0;background:var(--panel);border-left:3px solid var(--cyan);border-radius:5px;color:#c5dce9}
+.notice{padding:16px;background:#102942;border-left:3px solid var(--cyan);margin-top:20px;color:#b8d0df}
+footer{text-align:center;padding:30px;border-top:1px solid #39eaff30;color:#7895a9}
+@media(max-width:800px){
+.hero{flex-direction:column;text-align:center;padding:65px 0}
+.reactor{width:220px;height:220px;min-width:220px}
+.grid{grid-template-columns:1fr}
+.split{grid-template-columns:1fr}
+nav{height:auto;padding:18px 0;align-items:flex-start;gap:12px;flex-direction:column}
+nav a{margin:0 12px 0 0;font-size:13px}
+section{padding:55px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<nav>
+<div class="logo">TECHNO RC</div>
+<div>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#hardware">Hardware</a>
+<a href="#working">Working</a>
+<a href="#app">App</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="wrap hero">
+<div class="hero-text">
+<div class="tag">NEXT GENERATION STUDENT ROBOTICS</div>
+<h1>SMART ROBOT<br><span>CONTROL SYSTEM</span></h1>
+<p>Meet TECHNO RC — an Arduino-powered robot car combining Bluetooth remote control, voice control and automatic obstacle avoidance.</p>
+<a class="btn" href="#features">EXPLORE TECHNO RC →</a>
+</div>
+<div class="reactor"><div class="core"></div></div>
+</div>
+
+<section id="about">
+<div class="wrap">
+<h2 class="heading">ABOUT THE PROJECT</h2>
+<p class="sub">Engineering intelligence through robotics.</p>
+<div class="card">
+<p>TECHNO RC is a smart robotic car project built around the Arduino UNO. It explores wireless communication, motor control, distance measurement and autonomous navigation. The Android application provides an interface for controlling and connecting to the robot.</p>
+</div>
+</div>
+</section>
+
+<section id="features">
+<div class="wrap">
+<h2 class="heading">SYSTEM FEATURES</h2>
+<p class="sub">Four main app modules and intelligent robot functions.</p>
+<div class="grid">
+<div class="card"><div class="icon">🎮</div><h3>Remote Controller</h3><p>Control the robot's movement using the mobile application.</p></div>
+<div class="card"><div class="icon">🎙️</div><h3>Voice Controller</h3><p>Send supported movement commands using voice input.</p></div>
+<div class="card"><div class="icon">🔗</div><h3>Connect to Car</h3><p>Connect the Android app to the robot through Bluetooth.</p></div>
+<div class="card"><div class="icon">⚙️</div><h3>Settings</h3><p>Access the application's configuration and preferences.</p></div>
+<div class="card"><div class="icon">📡</div><h3>Obstacle Detection</h3><p>Ultrasonic sensing measures the distance to nearby objects.</p></div>
+<div class="card"><div class="icon">🤖</div><h3>Automatic Avoidance</h3><p>The robot can stop, scan and choose an open direction when its programmed avoidance mode is active.</p></div>
+</div>
+</div>
+</section>
+
+<section id="hardware">
+<div class="wrap">
+<h2 class="heading">HARDWARE COMPONENTS</h2>
+<p class="sub">The electronics behind the robot.</p>
+<div class="split">
+<div class="card">
+<h3>Movement System</h3>
+<ul>
+<li>Arduino UNO — main controller</li>
+<li>L298N — motor driver</li>
+<li>DC gear motors — wheel movement</li>
+<li>Robot chassis and wheels</li>
+</ul>
+</div>
+<div class="card">
+<h3>Sensing & Communication</h3>
+<ul>
+<li>HC-05 — Bluetooth communication</li>
+<li>HC-SR04 — ultrasonic distance sensor</li>
+<li>SG90 — servo motor for sensor scanning</li>
+<li>Buzzer — sound alert</li>
+<li>Battery pack — power supply</li>
+</ul>
+</div>
+</div>
+<div class="notice">Always check component voltage ratings, wiring polarity and motor power requirements before switching on the robot.</div>
+</div>
+</section>
+
+<section id="working">
+<div class="wrap">
+<h2 class="heading">HOW TECHNO RC WORKS</h2>
+<p class="sub">From mobile command to real-world movement.</p>
+<div class="card">
+<div class="steps">
+<div class="step">01 — The mobile application sends a command through Bluetooth.</div>
+<div class="step">02 — Arduino receives the command and controls the motor driver.</div>
+<div class="step">03 — The motors move the robot in the selected direction.</div>
+<div class="step">04 — The ultrasonic sensor checks the distance ahead.</div>
+<div class="step">05 — If an obstacle is detected, the programmed avoidance routine stops and scans for a safer path.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="app">
+<div class="wrap">
+<h2 class="heading">TECHNO RC ANDROID APP</h2>
+<p class="sub">Your mobile interface for the robot.</p>
+<div class="card" style="text-align:center">
+<div class="icon">📱</div>
+<h3>TECHNO RC Mobile Application</h3>
+<p>Use the project team's shared Android APK link to install the application.</p>
+<a class="btn" href="https://drive.google.com/file/d/1XYeb8Nza_kFp2NrCkAtsQrEia1wBnq22/view?usp=drive_link" target="_blank" rel="noopener">GET THE ANDROID APP →</a>
+<div class="notice">If the link is unavailable, ask the project owner to enable “Anyone with the link — Viewer” in Google Drive. Install APK files only from sources you trust.</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 TECHNO RC | STUDENT ROBOTICS PROJECT</p>
+<p>BUILT TO LEARN • DESIGNED TO EXPLORE</p>
+</footer>
+
+</body>
+</html>
